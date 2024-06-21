@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import {appwriteService} from "../appwrite/majorConfig.js"
 import { Link } from 'react-router-dom'
 
-function PostCard({$id, title,featuredImage}) {
+function PostCard({$id, title, featuredImage}) {
   return (
     <Link to={`/post/{$id}`}>
 
