@@ -1,4 +1,4 @@
-import { Container, Logo, LogoutBtn } from '../index'
+import { Container, Logo, LogoutBtn } from '../index.js'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -8,8 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
-  const authStatus = useSelector((state) =>  state.auth.status)
-
+const authStatus = useSelector((state) => state.auth)
 const navigate = useNavigate()
 
 const navItems = [
@@ -42,12 +41,12 @@ const navItems = [
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='py-3 shadow bg-gray-400'>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>
             <Link to='/'>
-              <Logo width='70px'   />
+              <Logo />
 
               </Link>
           </div>

@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-catch */
-import config from './config/config';
+import config from '../config/config';
 import {Client , ID, Databases, Storage, Query} from 'appwrite';
 
 

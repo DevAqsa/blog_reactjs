@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-undef */
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Login as authLogin} from "../store/authSlice" 
+import { login as authLogin } from '../store/authSlice.js'
 import {Button, Input, Logo} from "./index"
 import {useDispatch} from "react-redux"
-import {authService} from "../appwrite/auth"
+import authService from "../appwrite/auth"
 import { useForm } from "react-hook-form"
 
 function Login() {

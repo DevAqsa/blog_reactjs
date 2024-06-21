@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useId } from "react";
 
@@ -26,4 +27,4 @@ const Input = React.forwardRef(function input(
   );
 });
 
-export default input;
+export default Input;

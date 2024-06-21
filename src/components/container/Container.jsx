@@ -2,7 +2,7 @@
 
 function container({children}) {
   return (
-    <div className="w-full max-w-7 mx-auto ">{children}</div>
+    <div>{children}</div>
   )
 }
 
