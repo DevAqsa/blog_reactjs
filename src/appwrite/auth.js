@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-catch */
-import config from '../config/config.js';
+// import config from '../config/config.js';
 import {Client, Account, ID} from 'appwrite';
 
 export class AuthService  {
@@ -8,14 +8,21 @@ export class AuthService  {
     
     constructor() {
         this.Client
-            .setEndpoint(config.endpointurl)
-            .setProject(config.appwriteprojectid);
+            .setEndpoint('https://cloud.appwrite.io/v1')
+            .setProject('664af01700289149e0d8')
 
         this.account = new Account(this.Client);
            
     }
+    // constructor() {
+    //     this.Client
+    //     .setEndpoint('https://cloud.appwrite.io/v1')
+    //     .setProject('664af01700289149e0d8')
+    //     this.account = new Account(this.Client);
+           
+    // }
 
-    async creaetAccount ({email, password, name}) {
+    async createAccount ({email, password, name}) {
         try {
           const userAccount =  await this.account.create(ID.unique() ,email, password, name);
 
